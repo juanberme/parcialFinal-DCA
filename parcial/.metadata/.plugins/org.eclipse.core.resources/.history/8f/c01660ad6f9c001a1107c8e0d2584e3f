@@ -1,0 +1,31 @@
+package model;
+
+import processing.core.PApplet;
+
+public class enfermas extends personas {
+
+	PApplet app; 
+	
+	public enfermas(int posX, int posY, int tam, int r, int g, int b, PApplet app) {
+		super(posX, posY, tam, r, g, b);
+		
+	}
+
+	@Override
+	public int compareTo(personas o) {
+		
+		return 0;
+	}
+
+	@Override
+	public void pintar() {
+		
+		this.r = 255;
+		this.g = 0;
+		this.b = 0;
+		app.fill(r,g,b);
+		app.ellipse(posX, posY, tam, tam);
+		
+	}
+
+}

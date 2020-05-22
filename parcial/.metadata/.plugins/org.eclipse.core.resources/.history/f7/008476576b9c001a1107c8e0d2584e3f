@@ -1,0 +1,115 @@
+package model;
+
+import processing.core.PApplet;
+
+public abstract class personas implements Comparable<personas> {
+	
+	int posX, posY, tam, r, g, b, velX, velY, color;
+	PApplet ap;
+	
+	public personas(int posX, int posY, int tam, PApplet ap) {
+		this.posX = posX;
+		this.posY = posY;
+		this.tam = 7;
+		
+	}
+	
+	public void pintar();
+		
+		
+	
+
+	public void mover() {
+		
+		this.velX = 1;
+		this.velY = 1;
+		
+		this.posX += 5 * this.velX;
+	    this.posY += 5 * this.velY;
+
+	      if (this.posX >= 500 && this.posX <= 0) {
+	            this.velX *= -1;
+	        }
+	        if (this.posY >= 500 && this.posY <= 0) {
+	            this.velY *= -1;
+	        }
+	        
+	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+	public int getTam() {
+		return tam;
+	}
+
+	public void setTam(int tam) {
+		this.tam = tam;
+	}
+
+	public int getR() {
+		return r;
+	}
+
+	public void setR(int r) {
+		this.r = r;
+	}
+
+	public int getG() {
+		return g;
+	}
+
+	public void setG(int g) {
+		this.g = g;
+	}
+
+	public int getB() {
+		return b;
+	}
+
+	public void setB(int b) {
+		this.b = b;
+	}
+
+	public int getVelX() {
+		return velX;
+	}
+
+	public void setVelX(int velX) {
+		this.velX = velX;
+	}
+
+	public int getVelY() {
+		return velY;
+	}
+
+	public void setVelY(int velY) {
+		this.velY = velY;
+	}
+
+	public int getColor() {
+		return color;
+	}
+
+	public void setColor(int color) {
+		this.color = color;
+	}
+
+	
+	
+	
+
+}
